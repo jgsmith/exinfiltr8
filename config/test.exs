@@ -4,7 +4,17 @@ use Mix.Config
 # you can enable the server option below.
 config :exinfiltr8, Exinfiltr8Web.Endpoint,
   http: [port: 4002],
-  server: false
+  server: false,
+  live_view: [
+    signing_salt: "SECRET_SALT"
+  ]
+
+config :militerm, MilitermWeb.UserAuth.Guardian,
+  issuer: "militerm",
+  secret_key: "SECRET_KEY"
+
+config :libcluster,
+  topologies: []
 
 # Print only warnings and errors during test
 config :logger, level: :warn

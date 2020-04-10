@@ -21,6 +21,13 @@ module.exports = (env, options) => ({
   },
   module: {
     rules: [
+        {
+          test: require.resolve('jquery'),
+          use: [{
+              loader: 'expose-loader',
+              options: '$'
+          }]
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -31,6 +38,22 @@ module.exports = (env, options) => ({
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          {
+            loader: "css-loader" // translates CSS into CommonJS
+          },
+          {
+            loader: "sass-loader", // compiles Sass to CSS
+            options: {
+              sourceMap: true,
+              includePaths: ["node_modules/"]
+            }
+          }
+        ]
       }
     ]
   },

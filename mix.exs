@@ -42,7 +42,8 @@ defmodule Exinfiltr8.MixProject do
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:militerm, path: "../militerm"}
     ]
   end
 
@@ -54,7 +55,7 @@ defmodule Exinfiltr8.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
+      "ecto.setup": ["ecto.create", "migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]

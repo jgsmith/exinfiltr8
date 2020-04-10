@@ -11,6 +11,9 @@ config :exinfiltr8, Exinfiltr8Web.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
+  live_view: [
+    signing_salt: "SECRET_SALT"
+  ],
   watchers: [
     node: [
       "node_modules/webpack/bin/webpack.js",
@@ -20,6 +23,17 @@ config :exinfiltr8, Exinfiltr8Web.Endpoint,
       cd: Path.expand("../assets", __DIR__)
     ]
   ]
+
+config :militerm, MilitermTelnet.Endpoint,
+  tcp: [port: 6666],
+  server: true
+
+config :militerm, MilitermWeb.UserAuth.Guardian,
+  issuer: "militerm",
+  secret_key: "SECRET_KEY"
+
+config :libcluster,
+  topologies: []
 
 # ## SSL Support
 #

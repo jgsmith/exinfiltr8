@@ -12,8 +12,22 @@ use Mix.Config
 config :exinfiltr8, Exinfiltr8Web.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  live_view: [
+    signing_salt: "SECRET_SALT"
+  ]
 
+config :militerm, MilitermTelnet.Endpoint,
+  tcp: [port: 6666],
+  server: true
+
+config :militerm, MilitermWeb.UserAuth.Guardian,
+  issuer: "militerm",
+  secret_key: "SECRET_KEY"
+
+config :libcluster,
+  topologies: []
+  
 # Do not print debug messages in production
 config :logger, level: :info
 

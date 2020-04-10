@@ -17,6 +17,12 @@ config :exinfiltr8, Exinfiltr8Web.Endpoint,
   render_errors: [view: Exinfiltr8Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Exinfiltr8.PubSub, adapter: Phoenix.PubSub.PG2]
 
+
+config :ueberauth, Ueberauth,
+  providers: [
+    grapevine: {Grapevine.Ueberauth.Strategy, [scope: "profile email"]}
+  ]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
@@ -24,6 +30,20 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :militerm, Militerm.Cache.LocalSession,
+  # 24 hrs
+  gc_interval: 86_400
+
+config :militerm, Militerm.Cache.LocalComponent,
+  # 24 hrs
+  gc_interval: 86_400
+
+config :militerm, Militerm.Cache.Session, local: Militerm.Cache.LocalSession
+
+config :militerm, Militerm.Cache.Component, local: Militerm.Cache.LocalComponent
+
+import_config "militerm.exs"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
