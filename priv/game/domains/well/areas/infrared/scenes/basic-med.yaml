@@ -1,0 +1,20 @@
+---
+detail:
+  default:
+    exits:
+      west:
+        target: "scene:well:infrared:south-corridor-1"
+        detail: floor
+        proximity: on
+    nouns: [services, medical, med, office]
+    adjectives: [basic, med, medical, services]
+    short: Basic Medical Services
+    sight: >-
+      This is where citizens come to get their health checked out.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is littered with debris, but nothing too alarming.

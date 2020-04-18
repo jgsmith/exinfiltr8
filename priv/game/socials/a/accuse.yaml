@@ -1,0 +1,16 @@
+---
+verb: accuse
+syntaxes:
+  - "<direct:living>"
+  - "<string'string>"
+  - "<direct:living> [of] <string'string>"
+no-target:
+  no-argument:
+    narrative: "<Actor> <accuse> the butler."
+  argument:
+    narrative: "<Actor> <accuss> {{ string }}."
+target:
+  no-argument:
+    narrative: "<Actor> <accuse> <direct>."
+  argument:
+    narrative: "<Actor> <accuse> <direct> of {{ string }}."

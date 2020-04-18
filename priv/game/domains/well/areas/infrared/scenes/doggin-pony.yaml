@@ -1,0 +1,35 @@
+---
+detail:
+  default:
+    exits:
+      south:
+        target: "scene:well:infrared:east-corridor-1"
+        detail: floor
+        proximity: on
+    nouns: [pony]
+    adjectives: [doggin]
+    short: the Doggin Pony
+    sight: >-
+      This bar is fairly staid for a bar. Everything is orderly and clean.
+  floor:
+    related_to: default
+    related_by: in
+    proximities: [on, in the middle of]
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is pretty clean though not quite a dinner plate.
+  bartop:
+    related_to: default
+    related_by: in
+    proximities: [on, behind, in front of, against, beside]
+    short: the bar top
+    nouns: [bar, top, bartop]
+    adjectives: [bar]
+    extra: >-
+      A bartop sits off to the corner.
+    exits:
+      northeast:
+        target: "scene:well:infrared:doggin-pony-kitchen"
+        detail: floor
+        proximity: on

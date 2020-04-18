@@ -1,0 +1,11 @@
+---
+verb: adore
+syntaxes:
+  - "<direct:living>"
+  - "<string'string> <direct:living>"
+  - "<direct:living> <string'string>"
+target:
+  no-argument:
+    narrative: "<Actor> <adore> <direct>."
+  argument:
+    narrative: "<Actor> <adore> <direct:possessive> {{ string }}."

@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = (env, options) => ({
   optimization: {
@@ -43,6 +44,9 @@ module.exports = (env, options) => ({
         test: /\.scss$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
+          // {
+          //   loader: "style-loader" // creates style nodes from JS strings
+          // },
           {
             loader: "css-loader" // translates CSS into CommonJS
           },

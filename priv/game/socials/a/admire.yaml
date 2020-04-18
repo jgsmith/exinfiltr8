@@ -1,0 +1,11 @@
+---
+verb: admire
+syntaxes:
+  - "<direct:living>"
+  - "<string'string> <direct:living>"
+  - "<direct:living> <string'string>"
+target:
+  no-argument:
+    narrative: "<Actor> <admire> <direct>."
+  argument:
+    narrative: "<Actor> <admire> <direct:possessive> {{ string }}."

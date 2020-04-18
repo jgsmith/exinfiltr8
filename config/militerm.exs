@@ -1,23 +1,13 @@
 # Militerm game configuration
-use Mix.Config
+import Config
 
-alias Militerm.Components
+config :militerm, :game,
+  dir: {:exinfiltr8, "priv/game"},
+  character_archetype: "std:character",
+  character_start_location: {"on", "scene:well:infrared:atrium", "floor"},
+  character_start_data: {Exinfiltr8.Master, :character_start_data}
 
-config :militerm, :game, dir: "priv/game"
-
-config :militerm, :components,
-  counter: Components.Counters,
-  detail: Components.Details,
-  eflag: Components.EphemeralFlag,
-  epad: Components.EphemeralPad,
-  flag: Components.Flags,
-  identity: Components.Identity,
-  location: Components.Location,
-  resource: Components.Resources,
-  skill: Components.Skills,
-  stat: Components.Stats,
-  thing: Components.Things,
-  trait: Components.Traits
+config :militerm, :master, Exinfiltr8.Master
 
 config :militerm, :repo, Exinfiltr8.Repo
 

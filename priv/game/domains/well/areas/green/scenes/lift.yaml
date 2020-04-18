@@ -1,0 +1,42 @@
+---
+archetype: "std:elevator"
+detail:
+  default:
+    exits:
+      out:
+        target: "scene:well:green:atrium"
+    short: the elevator
+    sight: >-
+      This circular space is open to the core atrium. A small sign floats about
+      eye-level.
+  floor:
+    related_to: default
+    related_by: in
+    nouns: [floor]
+    short: the floor
+    sight: >-
+      The floor is transparent, letting you see all the way down to solid
+      concrete below.
+  ceiling:
+    related_to: default
+    related_by: in
+    short: the ceiling
+    nouns: [ceiling]
+    sight: >-
+      The ceiling is transparent. The core shaft of the lift disappears into
+      the distance.
+  sign:
+    related_to: default
+    related_by: in
+    nouns: [sign]
+    adjectives: [small, floating]
+    sight: >-
+      This small sign appears to float near the edge of the lift. It has
+      something written on it.
+    read: >-
+      The small sign reads: "To serve you better, the government has determined
+      that the lift should be voice activated. Simply say which level you would 
+      like to travel to."
+trait:
+  lift:
+    level: green

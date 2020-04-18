@@ -1,0 +1,20 @@
+---
+detail:
+  default:
+    exits:
+      northwest:
+        target: "scene:well:infrared:atrium"
+        detail: floor
+        proximity: on
+    nouns: [lab, cyberlab]
+    adjectives: [basic, cyber]
+    short: the Basic Cyberlab
+    sight: >-
+      The cyberlab is where all citizens can access approved computing.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is littered with debris, but nothing too alarming.

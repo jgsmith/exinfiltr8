@@ -1,0 +1,17 @@
+---
+verb: argue
+syntaxes:
+  - "[with] <direct:living>"
+  - "<string'string>"
+  - "<string'string> [with] <direct:living>"
+  - "[with] <direct:living> <string'string>"
+no-target:
+  no-argument:
+    narrative: "<Actor> <argue> the point."
+  argument:
+    narrative: "<Actor> <argue> {{ string }}."
+target:
+  no-argument:
+    narrative: "<Actor> <argue> with <direct>."
+  argument:
+    narrative: "<Actor> <argue> with <direct> {{ string }}."
