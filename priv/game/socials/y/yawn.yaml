@@ -1,0 +1,18 @@
+---
+verb: yawn
+syntaxes:
+  - ""
+  - "[at] <direct:living>"
+  - "<string'string>"
+  - "<string'string> [at] <direct:living>"
+  - "[at] <direct:living> <string'string>"
+no-target:
+  argument:
+    narrative: "<Actor> <yawn> {{ string }}."
+  no-argument:
+    narrative: "<Actor> <yawn>."
+target:
+  argument: 
+    narrative: "<Actor> <yawn> at <direct> {{ string }}."
+  no-argument:
+    narrative: "<Actor> <yawn> at <direct>."

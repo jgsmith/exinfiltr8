@@ -1,0 +1,16 @@
+---
+detail:
+  default:
+    exits:
+      out:
+        target: "scene:well:infrared:doggin-pony-kitchen"
+        detail: floor
+        proximity: on
+  floor:
+    related_to: default
+    related_by: in
+    proximities: [on]
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is cluttered with bins of various sizes.

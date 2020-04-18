@@ -1,0 +1,10 @@
+---
+verb: thank
+syntaxes:
+  - "<direct:living>"
+  - "<direct:living> <string'string>"
+target:
+  no-argument:
+    narrative: "<Actor> <thank> <direct>."
+  argument:
+    narrative: "<Actor> <thank> <direct> {{ string }}."

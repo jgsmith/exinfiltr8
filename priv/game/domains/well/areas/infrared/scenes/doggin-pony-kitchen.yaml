@@ -1,0 +1,29 @@
+---
+detail:
+  default:
+    exits:
+      southwest:
+        target: "scene:well:infrared:doggin-pony"
+        detail: bartop
+        proximity: behind
+  floor:
+    related_to: default
+    related_by: in
+    proximities: [on, in the middle of]
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is pretty clean, though this is a kitchen. It better be clean.
+  pantry:
+    related_to: default
+    related_by: in
+    proximities: [near]
+    short: the pantry
+    nouns: [pantry]
+    sight: >-
+      It looks like it stores quite a bit of stuff that might be useful in a
+      kitchen.
+    enter:
+      target: "scene:well:infrared:doggin-pony-pantry"
+      detail: floor
+      proximity: on

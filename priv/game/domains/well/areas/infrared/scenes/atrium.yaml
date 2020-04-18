@@ -1,0 +1,86 @@
+---
+detail:
+  default:
+    exits:
+      east:
+        target: "scene:well:infrared:east-corridor-1"
+        detail: floor
+        proximity: on
+      southeast:
+        target: "scene:well:infrared:basic-cyberlab"
+        detail: floor
+        proximity: on
+      northeast:
+        target: "scene:well:infrared:basic-services"
+        detail: floor
+        proximity: on
+    short: the atrium
+    sight: >-
+      This spacious space shows the care the government has for its citizens.
+      Time stands still here.
+  posters:
+    related_to: walls
+    related_by: hanging on
+    short: some posters
+    nouns: [poster, posters]
+    adjectives: [some]
+    extra:
+      sight: "Some posters are hanging on the walls."
+  walls:
+    related_to: default
+    related_by: in
+    short: the walls
+    nouns: [wall, walls]
+    adjectives: [spotless, white, smooth, bright]
+    sight: >-
+      The walls are spotless, white, and smooth. There are no marks from
+      all of the years of traffic. There is no graffiti.
+  ceiling:
+    related_to: default
+    related_by: in
+    short: the ceiling
+    nouns: [ceiling]
+    adjectives: [spotless, white, smooth, bright]
+    extra:
+      sight: The spotless white ceiling glows, lighting the atrium.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    adjectives: [spotless, white, smooth, bright]
+    sight: >-
+      This spacious space shows the care the government has for its citizens.
+      Time stands still here.
+    extra:
+      sight: The gleaming floor shows no wear and tear from the years of traffic.
+  circle:
+    related_to: lift
+    related_by: in
+    short: a circle
+    nouns: [circle]
+    adjectives: [large]
+    sight: >-
+      The large circle sits right below a shimmering in the air that divides
+      the atrium from the lift.
+    extra:
+      sight: A large circle
+      on the floor shows where you cross form the atrium into the lift.
+    enter:
+      target: "scene:well:infrared:lift"
+      detail: default
+      proximity: in
+  lift:
+    related_to: default
+    related_by: in
+    extra:
+      sight: A lift is in the center of the atrium.
+    sight: >-
+      The lift is nearly transparent, a mere shimmer in the air. 
+    nouns: [lift, elevator]
+    adjectives: []
+    short: the lift
+    enter:
+      target: "scene:well:infrared:lift"
+      detail: default
+      proximity: in

@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
@@ -27,7 +27,7 @@ config :militerm, MilitermWeb.UserAuth.Guardian,
 
 config :libcluster,
   topologies: []
-  
+
 # Do not print debug messages in production
 config :logger, level: :info
 

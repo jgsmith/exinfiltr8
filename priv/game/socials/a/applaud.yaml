@@ -1,0 +1,17 @@
+---
+verb: applaud
+syntaxes:
+  - "<direct:living>"
+  - "<string'string>"
+  - "<string'string> <direct:living>"
+  - "<direct:living> <string'string>"
+no-target:
+  no-argument:
+    narrative: "<Actor> <applaud>."
+  argument:
+    narrative: "<Actor> <applaud> {{ string }}."
+target:
+  no-argument:
+    narrative: "<Actor> <applaud> <direct>."
+  argument:
+    narrative: "<Actor> <applaud> <direct> {{ string }}."

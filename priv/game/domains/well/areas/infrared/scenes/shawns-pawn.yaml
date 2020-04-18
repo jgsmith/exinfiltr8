@@ -1,0 +1,30 @@
+---
+detail:
+  default:
+    exits:
+      north:
+        target: "scene:well:infrared:east-corridor-2"
+        detail: floor
+        proximity: on
+    nouns: [pawn]
+    adjectives: [shawn, shawns]
+    short: Shawn's Pawn
+    sight: >-
+      This reputable pawn shop is fairly empty, of course.
+  floor:
+    related_to: default
+    related_by: in
+    proximities: [on, in the middle of]
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is pretty clean.
+  shelves:
+    related_to: default
+    related_by: in
+    proximities: [behind, in front of, against, beside]
+    short: shelves
+    nouns: [shelf, shelves]
+    adjectives: []
+    extra: >-
+      Shelves line the shop with a smattering of items for sale.  

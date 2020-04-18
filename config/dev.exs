@@ -1,4 +1,4 @@
-use Mix.Config
+import Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
 config :exinfiltr8, Exinfiltr8Web.Endpoint,
-  http: [port: 4000],
+  http: [port: 5000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -25,12 +25,14 @@ config :exinfiltr8, Exinfiltr8Web.Endpoint,
   ]
 
 config :militerm, MilitermTelnet.Endpoint,
-  tcp: [port: 6666],
+  tcp: [port: 7777],
   server: true
 
 config :militerm, MilitermWeb.UserAuth.Guardian,
   issuer: "militerm",
   secret_key: "SECRET_KEY"
+
+config :militerm, :game, watch_files: true
 
 config :libcluster,
   topologies: []
@@ -87,3 +89,5 @@ config :exinfiltr8, Exinfiltr8.Repo,
   database: "exinfiltr8_dev",
   hostname: "localhost",
   pool_size: 10
+
+import_config "dev.secret.exs"

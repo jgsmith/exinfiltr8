@@ -23,6 +23,9 @@ defmodule Exinfiltr8Web do
 
       import Plug.Conn
       import Exinfiltr8Web.Gettext
+      import Phoenix.LiveView.Controller
+      import MilitermWeb.UserAuth.Helpers
+
       alias Exinfiltr8Web.Router.Helpers, as: Routes
     end
   end
@@ -41,6 +44,8 @@ defmodule Exinfiltr8Web do
 
       import Exinfiltr8Web.ErrorHelpers
       import Exinfiltr8Web.Gettext
+      import Phoenix.LiveView.Helpers
+      import MilitermWeb.UserAuth.Helpers
       alias Exinfiltr8Web.Router.Helpers, as: Routes
     end
   end
@@ -50,6 +55,7 @@ defmodule Exinfiltr8Web do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

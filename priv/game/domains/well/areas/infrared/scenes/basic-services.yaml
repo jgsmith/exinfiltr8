@@ -1,0 +1,20 @@
+---
+detail:
+  default:
+    exits:
+      southwest:
+        target: "scene:well:infrared:atrium"
+        detail: floor
+        proximity: on
+    nouns: [services, office]
+    adjectives: [basic, services]
+    short: Basic Services
+    sight: >-
+      This is where citizens come to check their standing with the government.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The floor is littered with debris, but nothing too alarming.

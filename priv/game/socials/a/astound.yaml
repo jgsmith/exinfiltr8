@@ -1,0 +1,10 @@
+---
+verb: astound
+syntaxes:
+  - "<direct:living>"
+  - "<direct:living> [with] <string'string>"
+target:
+  no-argument:
+    narrative: "<Actor> <astound> <direct>."
+  argument:
+    narrative: "<Actor> <astound> <direct:possessive> with {{ string }}."

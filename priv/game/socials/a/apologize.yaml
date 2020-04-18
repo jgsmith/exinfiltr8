@@ -1,0 +1,17 @@
+---
+verb: apologize
+syntaxes:
+  - "[to] <direct:living>"
+  - "<string'string>"
+  - "<string'string> [to] <direct:living>"
+  - "[to] <direct:living> <string'string>"
+no-target:
+  argument:
+    narrative: "<Actor> <apologize> {{ string }}."
+  no-argument:
+    narrative: "<Actor> <apologize>."
+target:
+  argument:
+    narrative: "<Actor> <apologize> to <direct> {{ string }}."
+  no-argument:
+    narrative: "<Actor> <apologize> to <direct>."

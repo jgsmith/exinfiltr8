@@ -5,7 +5,7 @@
 # is restricted to this project.
 
 # General application configuration
-use Mix.Config
+import Config
 
 config :exinfiltr8,
   ecto_repos: [Exinfiltr8.Repo]
@@ -16,7 +16,6 @@ config :exinfiltr8, Exinfiltr8Web.Endpoint,
   secret_key_base: "/PLkHqCpctqdt4UDZR0RrVaFPWGskUIUnK27mQbH9qAb34zcadTClC3/MQG+i4JB",
   render_errors: [view: Exinfiltr8Web.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Exinfiltr8.PubSub, adapter: Phoenix.PubSub.PG2]
-
 
 config :ueberauth, Ueberauth,
   providers: [
