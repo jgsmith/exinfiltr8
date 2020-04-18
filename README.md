@@ -1,6 +1,6 @@
 # Exinfiltr8
 
-Entry for the (https://itch.io/jam/enterthemud3)[2020 Enter the (Multi-User) Dungeon codejam].
+Entry for the [2020 Enter the (Multi-User) Dungeon codejam](https://itch.io/jam/enterthemud3).
 
 To start your Phoenix server:
 
