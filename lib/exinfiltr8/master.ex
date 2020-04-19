@@ -1,6 +1,8 @@
 defmodule Exinfiltr8.Master do
   use Militerm.Master, based_on: Militerm.Master.Default
 
+  system(Exinfiltr8.Systems.Score)
+
   def character_start_data(attrs) do
     {nominative, objective, possessive} =
       case attrs["gender"] do

@@ -6,6 +6,7 @@ syntaxes:
   - <string'message>
 see also:
   - ask
+  - shout
   - whisper
 actions:
   - say:normal

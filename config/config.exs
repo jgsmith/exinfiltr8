@@ -38,9 +38,13 @@ config :militerm, Militerm.Cache.LocalComponent,
   # 24 hrs
   gc_interval: 86_400
 
-config :militerm, Militerm.Cache.Session, local: Militerm.Cache.LocalSession
+config :militerm, Militerm.Cache.Session,
+  primary: Militerm.Cache.Session.Primary,
+  node_selector: Nebulex.Adapters.Partitioned
 
-config :militerm, Militerm.Cache.Component, local: Militerm.Cache.LocalComponent
+config :militerm, Militerm.Cache.Component,
+  primary: Militerm.Cache.Component.Primary,
+  node_selector: Nebulex.Adapters.Partitioned
 
 import_config "militerm.exs"
 

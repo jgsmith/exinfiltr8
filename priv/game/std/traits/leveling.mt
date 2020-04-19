@@ -71,3 +71,23 @@ calculates trait:next:level:experience with do
   set $level to trait:government:trust
   trait:government:levels:$level:experience
 end
+
+reacts to goverment:experience:decrement as target with do
+  if amount > counter:government:experience then
+    set counter:government:experience to 0
+  else
+    set counter:government:experience to counter:government:experience - amount
+  end
+end
+
+reacts to goverment:experience:increment as target with do
+  set counter:government:experience to counter:government:experience + amount
+end
+
+reacts to change:counter:government:experience as observed with do
+  if counter:government:experience > trait:next:level:exeperience then
+    set trait:government:trust to trait:next:level
+  elsif counter:government:experience < trait:level:experience then
+    set trait:government:trust to trait:prev:level
+  end
+end

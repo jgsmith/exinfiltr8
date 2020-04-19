@@ -28,8 +28,10 @@ detail:
   sign:
     related_to: default
     related_by: in
+    short:  a sign
     nouns: [sign]
     adjectives: [small, floating]
+    position: floating
     sight: >-
       This small sign appears to float near the edge of the lift. It has
       something written on it.

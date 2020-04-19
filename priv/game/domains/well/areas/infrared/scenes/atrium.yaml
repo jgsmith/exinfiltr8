@@ -6,6 +6,10 @@ detail:
         target: "scene:well:infrared:east-corridor-1"
         detail: floor
         proximity: on
+      south:
+        target: "scene:well:infrared:south-corridor-1"
+        detail: floor
+        proximity: on
       southeast:
         target: "scene:well:infrared:basic-cyberlab"
         detail: floor
@@ -64,8 +68,9 @@ detail:
       The large circle sits right below a shimmering in the air that divides
       the atrium from the lift.
     extra:
-      sight: A large circle
-      on the floor shows where you cross form the atrium into the lift.
+      sight: >-
+        A large circle on the floor shows where you cross form the atrium into
+        the lift.
     enter:
       target: "scene:well:infrared:lift"
       detail: default

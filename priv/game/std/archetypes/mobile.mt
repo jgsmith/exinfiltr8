@@ -13,7 +13,7 @@ based on std:thing
 
 is leveling, sentient
 
-is going, walking, positioning, entering
+is going, walking, positioning, entering, moving
 
 can move:accept as actor
 
@@ -27,7 +27,6 @@ end
 
 reacts to move:normal as actor with do
   if eflag:moving then
-    reset eflag:moving
     Place(moving_to)
   end
 end
@@ -37,27 +36,26 @@ reacts to post-move:accept with
     set physical:position to physical:location.detail:default:position
   end
 
-reacts to pre-move:lift as actor with do
+reacts to pre-move:elevator as direct with do
   if location:environment is elevator then
-    :"The lift whisks <actor> away."
+    :"The lift whisks <this> away."
     set eflag:moving
     set eflag:via-elevator
-    True
   else
     uhoh "You have to be in a lift!"
   end
 end
 
-reacts to move:lift as actor with do
+reacts to move:elevator as direct with do
   if eflag:moving then
-    reset eflag:moving
     Place(moving_to)
   end
 end
 
-reacts to post-move:lift as actor with do
+reacts to post-move:elevator as direct with do
+  reset eflag:moving
   if eflag:via-elevator then
     reset eflag:via-elevator
-    :"<Actor> <fly> into the lift."
+    :"<This> <fly> into the lift."
   end
 end

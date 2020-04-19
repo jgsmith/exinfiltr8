@@ -2,6 +2,7 @@ can go as actor
 
 reacts to pre-enter:item as actor with do
   if direct.detail:default:enter:target then
+    set eflag:moving
     set eflag:entering
     if is standing then
       :"<Actor> <enter> <direct>."
