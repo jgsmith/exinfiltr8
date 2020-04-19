@@ -1,5 +1,7 @@
 ---
 ---
+based on std:thing
+
 ##
 # Marks the entity as a scene
 is scene

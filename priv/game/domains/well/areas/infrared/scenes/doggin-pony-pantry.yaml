@@ -1,6 +1,7 @@
 ---
 detail:
   default:
+    short: the pantry
     exits:
       out:
         target: "scene:well:infrared:doggin-pony-kitchen"

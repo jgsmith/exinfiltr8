@@ -1,6 +1,7 @@
 ---
 detail:
   default:
+    short: "the kitchen"
     exits:
       southwest:
         target: "scene:well:infrared:doggin-pony"

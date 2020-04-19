@@ -49,6 +49,15 @@ reacts to pre-sit as actor with
     end
   end
 
+reacts to pre-sit:maybe as actor with
+  if is not sitting then
+    if "sitting" & trait:allowed:positions then
+      set flag:is-about-to-sit
+    else
+      uhoh "You can't sit there."
+    end
+  end
+
 reacts to post-sit as actor with
   if flag:is-about-to-sit then
     reset flag:is-about-to-sit
@@ -59,6 +68,15 @@ reacts to pre-crouch as actor with
   if is crouching then
     uhoh "You are already crouching."
   else
+    if "crouching" & trait:allowed:positions then
+      set flag:is-about-to-crouch
+    else
+      uhoh "You can't crouch there."
+    end
+  end
+
+reacts to pre-crouch:maybe as actor with
+  if is not crouching then
     if "crouching" & trait:allowed:positions then
       set flag:is-about-to-crouch
     else
@@ -83,6 +101,15 @@ reacts to pre-kneel as actor with
     end
   end
 
+reacts to pre-kneel:maybe as actor with
+  if is not kneeling then
+    if "kneeling" & trait:allowed:positions then
+      set flag:is-about-to-kneel
+    else
+      uhoh "You can't kneel there."
+    end
+  end
+
 reacts to post-kneel as actor with
   if flag:is-about-to-kneel then
     reset flag:is-about-to-kneel
@@ -100,6 +127,15 @@ reacts to pre-stand as actor with
     end
   end
 
+reacts to pre-stand:maybe as actor with
+  if is not standing then
+    if "standing" & trait:allowed:positions then
+      set flag:is-about-to-stand
+    else
+      uhoh "You can't stand there."
+    end
+  end
+    
 reacts to post-stand as actor with
   if flag:is-about-to-stand then
     reset flag:is-about-to-stand

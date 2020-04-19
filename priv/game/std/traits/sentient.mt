@@ -10,4 +10,4 @@
 # players.
 #
 
-is viewing, talking
+is viewing, talking, reading
