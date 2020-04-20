@@ -1,0 +1,13 @@
+---
+detail:
+  default:
+    short: a crawlspace
+    exits:
+      out:
+        target: "scene:well:infrared:doggin-pony-pantry"
+        detail: floor
+        proximity: "on"
+    default-position: crouching
+    allowed-positions: [crouching]
+    sight: >-
+      The crawlspace is just big enough to fit.

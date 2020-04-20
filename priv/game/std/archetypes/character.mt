@@ -119,5 +119,5 @@ end
 #
 # Used when a character leaves the game.
 #
-reacts to leave:game as actor with
-  Emit("Goodbye!")
+# reacts to leave:game as actor with
+#   Emit("Goodbye!")

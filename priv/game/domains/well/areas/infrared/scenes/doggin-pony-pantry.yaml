@@ -15,3 +15,47 @@ detail:
     nouns: [floor]
     sight: >-
       The floor is cluttered with bins of various sizes.
+  door:
+    related_to: default
+    related_by: in
+    proximities: [near, in front of]
+    nouns: [door]
+    adjectives: [wooden, wood, pantry]
+    short: a door
+    state: It is closed.
+    sight: >-
+      The pantry door is pretty solid wood. {{ detail:door:state }}
+  shelves:
+    related_to: floor
+    related_by: on
+    proximities: [near]
+    short: shelving
+    nouns: [shelf, shelves, shelving]
+    extra: Shelves line the walls.
+    sight: >-
+      The shelves have various dry and canned goods you'd expect in a pub kitchen.
+  hole:
+    related_to: shelves
+    related_by: behind
+    short: a hole
+    nouns: [hole]
+    sight: >-
+      The hole in the wall is hidden behind the shelving.
+    extra: A hole is visible behind the shelves.
+    enter:
+      target: "scene:well:infrared:pantry-crawlspace"
+      detail: default
+      proximity: in
+    climbs:
+      through:
+        target: "scene:well:infrared:pantry-crawlspace"
+        detail: default
+        proximity: in
+flag:
+  - doors:door:not-opened
+thing:
+  door:
+    links:
+      door:
+        target: "scene:well:infrared:doggin-pony-kitchen"
+        coord: pantry-door

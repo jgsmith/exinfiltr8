@@ -15,6 +15,16 @@ detail:
     nouns: [floor]
     sight: >-
       The floor is pretty clean, though this is a kitchen. It better be clean.
+  pantry-door:
+    related_to: default
+    related_by: in
+    proximities: [near, in front of] 
+    nouns: [door]
+    adjectives: [wooden, wood, pantry]
+    short: a door  
+    state: It is closed.
+    sight: >-
+      The pantry door is pretty solid wood. {{ detail:pantry-door:state }}
   pantry:
     related_to: default
     related_by: in
@@ -28,3 +38,12 @@ detail:
       target: "scene:well:infrared:doggin-pony-pantry"
       detail: floor
       proximity: on
+flag:
+  - doors:pantry-door:not-opened
+thing:
+  door:
+    links:
+      pantry-door:
+        target: "scene:well:infrared:doggin-pony-pantry"
+        coord: door
+      

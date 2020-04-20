@@ -13,7 +13,7 @@ based on std:thing
 
 is leveling, sentient
 
-is going, walking, positioning, entering, moving
+is going, walking, positioning, entering, moving, climbing
 
 can move:accept as actor
 
@@ -32,8 +32,8 @@ reacts to move:normal as actor with do
 end
 
 reacts to post-move:accept with
-  if physical:location.detail:default:position and not (physical:position & trait:allowed:positions) then
-    set physical:position to physical:location.detail:default:position
+  if physical:location.detail:default:default-position and not (physical:position & trait:allowed:positions) then
+    set physical:position to physical:location.detail:default:default-position
   end
 
 reacts to pre-move:elevator as direct with do

@@ -1,0 +1,23 @@
+---
+detail:
+  default:
+    exits:
+      south:
+        target: "scene:well:infrared:atrium"
+        detail: floor
+        proximity: on
+      north:
+        target: "scene:well:infrared:north-corridor-2"
+        detail: floor
+        proximity: on
+    nouns: [corridor]
+    short: a corridor
+    sight: >-
+      The corridor extends like a spoke to the north from the atrium.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The corridor extends like a spoke to the north from the atrium.
