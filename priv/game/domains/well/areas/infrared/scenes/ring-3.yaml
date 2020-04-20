@@ -1,0 +1,23 @@
+---
+detail:
+  default:
+    exits:
+      northeast:
+        target: "scene:well:infrared:ring-2"
+        detail: floor
+        proximity: on
+      southwest:
+        target: "scene:well:infrared:ring-4"
+        detail: floor
+        proximity: on
+    nouns: [corridor]
+    short: a corridor
+    sight: >-
+      The corridor runs in a ring around this level.
+  floor:
+    related_to: default
+    related_by: in
+    short: the floor
+    nouns: [floor]
+    sight: >-
+      The corridor runs in a ring around this level.

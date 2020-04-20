@@ -10,6 +10,14 @@ detail:
         target: "scene:well:infrared:south-corridor-1"
         detail: floor
         proximity: on
+      west:
+        target: "scene:well:infrared:west-corridor-1"
+        detail: floor
+        proximity: on
+      north:
+        target: "scene:well:infrared:north-corridor-1"
+        detail: floor
+        proximity: on
       southeast:
         target: "scene:well:infrared:basic-cyberlab"
         detail: floor
