@@ -5,6 +5,8 @@ detail:
     exits:
       out:
         target: "scene:well:infrared:atrium"
+        detail: floor
+        proximity: on
     short: the elevator
     sight: >-
       This circular space is open to the core atrium. A small sign floats about

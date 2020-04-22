@@ -30,8 +30,9 @@ detail:
     adjectives: [bar]
     sight: >-
       The bar is a solid piece of plastic that hides the years of service.
-    extra: >-
-      A bar sits off to the corner.
+    extra: 
+      sight: >-
+        A bar sits off to the corner.
     exits:
       northeast:
         target: "scene:well:infrared:doggin-pony-kitchen"

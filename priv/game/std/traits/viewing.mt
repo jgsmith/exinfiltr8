@@ -39,7 +39,7 @@ reacts to post-scan:item:brief as actor with
     reset eflag:brief-scan-item
     reset eflag:scanning
 
-    Emit("{item sense='sight'}{{ Describe(direct) }}{/item}") #"
+    Emit("{item sense='sight'}{{ Describe( direct ) }}{/item}") #"
   end
 
 ##
@@ -56,7 +56,10 @@ reacts to post-scan:env:brief as actor with
   if eflag:brief-scan then
     :"<Actor:name> <glance> around."
     Emit( "{title}{{ location:environment }}{/title}" )
-    Emit( "{env sense='sight'}{{ Describe() }}{/env}" ) #"
+    Emit( "{env sense='sight'}
+            {{ Describe( ) }}
+            {{ HospitalDescribeBusiness() }}
+          {/env}" ) #"
     Emit( Inventory( location:location ) )
     Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
     reset eflag:brief-scan
@@ -73,7 +76,10 @@ reacts to post-scan:env as actor with
     :"<Actor:name> <look> around."
     Emit( "{title}{{ location:environment }}{/title}" )
     
-    Emit( "{env sense='sight'}{{ DescribeLong( ) }}{/env}") #"
+    Emit( "{env sense='sight'}
+            {{ DescribeLong( ) }} 
+            {{ HospitalDescribeBusiness() }}
+          {/env}") #"
     Emit( Inventory( location:location ) )
     Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
     reset eflag:scan

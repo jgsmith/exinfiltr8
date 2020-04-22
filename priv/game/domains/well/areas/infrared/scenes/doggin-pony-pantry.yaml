@@ -31,7 +31,8 @@ detail:
     proximities: [near]
     short: shelving
     nouns: [shelf, shelves, shelving]
-    extra: Shelves line the walls.
+    extra:
+      sight: Shelves line the walls.
     sight: >-
       The shelves have various dry and canned goods you'd expect in a pub kitchen.
   hole:
@@ -41,7 +42,8 @@ detail:
     nouns: [hole]
     sight: >-
       The hole in the wall is hidden behind the shelving.
-    extra: A hole is visible behind the shelves.
+    extra: 
+      sight: A hole is visible behind the shelves.
     enter:
       target: "scene:well:infrared:pantry-crawlspace"
       detail: default

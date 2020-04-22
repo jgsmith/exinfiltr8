@@ -36,17 +36,21 @@ detail:
     short: some posters
     nouns: [poster, posters]
     adjectives: [some]
+    cardinality: plural
     extra:
-      sight: "Some posters are hanging on the walls."
+      sight: "are hung here and there in perfect alignment."
   walls:
     related_to: default
     related_by: in
     short: the walls
     nouns: [wall, walls]
     adjectives: [spotless, white, smooth, bright]
+    cardinality: plural
     sight: >-
       The walls are spotless, white, and smooth. There are no marks from
       all of the years of traffic. There is no graffiti.
+    extra:
+      sight: are spotless and smooth, seemingly untouched by human hands.
   ceiling:
     related_to: default
     related_by: in
@@ -54,7 +58,7 @@ detail:
     nouns: [ceiling]
     adjectives: [spotless, white, smooth, bright]
     extra:
-      sight: The spotless white ceiling glows, lighting the atrium.
+      sight: glows, lighting the atrium.
   floor:
     related_to: default
     related_by: in
@@ -65,7 +69,7 @@ detail:
       This spacious space shows the care the government has for its citizens.
       Time stands still here.
     extra:
-      sight: The gleaming floor shows no wear and tear from the years of traffic.
+      sight: shows no wear and tear from the years of traffic.
   circle:
     related_to: lift
     related_by: in
@@ -76,9 +80,7 @@ detail:
       The large circle sits right below a shimmering in the air that divides
       the atrium from the lift.
     extra:
-      sight: >-
-        A large circle on the floor shows where you cross form the atrium into
-        the lift.
+      sight: shows where you cross from the atrium into the lift.
     enter:
       target: "scene:well:infrared:lift"
       detail: default
@@ -87,7 +89,7 @@ detail:
     related_to: default
     related_by: in
     extra:
-      sight: A lift is in the center of the atrium.
+      sight: is in the center of the atrium.
     sight: >-
       The lift is nearly transparent, a mere shimmer in the air. 
     nouns: [lift, elevator]
