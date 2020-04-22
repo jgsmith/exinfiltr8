@@ -26,5 +26,6 @@ detail:
     short: shelves
     nouns: [shelf, shelves]
     adjectives: []
-    extra: >-
-      Shelves line the shop with a smattering of items for sale.  
+    extra:  
+      sight: >-
+        Shelves line the shop with a smattering of items for sale.  

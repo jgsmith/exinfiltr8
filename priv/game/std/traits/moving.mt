@@ -32,7 +32,7 @@ reacts to move:to as actor with do
 end
 
 reacts to pre-move:prox as actor with do
-  if not proximity & direct.detail:default:proximities then
+  if not (proximity & direct.detail:default:proximities) then
     [ <- move:to as actor with direct: direct ]
   else
     set eflag:moving
@@ -45,9 +45,7 @@ reacts to move:prox as actor with do
   
   if proximity = "at" then
     set $prep to "to"
-  elsif proximity = "on" then
-    set $prep to "onto"
-  elsif proximity = "onto" or proximity = "on to" then
+  elsif proximity = "onto" or proximity = "on to" or proximity = "to" or proximity = "on" then
     set $prep to "onto"
     set proximity to "on"
   end

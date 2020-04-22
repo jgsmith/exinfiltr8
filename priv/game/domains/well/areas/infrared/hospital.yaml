@@ -1,0 +1,54 @@
+---
+zones:
+  ring:
+  east-corridor:
+  west-corridor:
+  north-corridor:
+  south-corridor:
+locations:
+  atrium:
+    npcs:
+      cricket: 
+        chance: 1
+        position: standing
+        placement:
+          - on: floor
+  basic-cyberlab:
+  doggin-pony:
+  doggin-pony-kitchen:
+    npcs:
+      cook:
+        chance: 1
+        position: standing
+        placement:
+          - at: counter
+          - at: sink
+          - on: floor
+groups:
+npcs:
+  cook:
+    archetype: "std:npc"
+    is_transient: false
+    data:
+      detail:
+        default:
+          nouns: [cook]
+          short: the cook
+          sight: The cook is busy preparing food.
+        identity:
+          nominative: he
+          objective: him
+          possessive: his
+  cricket:
+    archetype: "std:npc"
+    is_transient: true
+    data:
+      detail:
+        default:
+          nouns: [cricket]
+          short: a cricket
+          sight: The brown cricket sits there waving its antennae around.
+      identity:
+        nominative: it
+        objective: it
+        possessive: its
