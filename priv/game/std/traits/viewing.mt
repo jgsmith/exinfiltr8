@@ -55,13 +55,17 @@ end
 reacts to post-scan:env:brief as actor with
   if eflag:brief-scan then
     :"<Actor:name> <glance> around."
-    Emit( "{title}{{ location:environment }}{/title}" )
-    Emit( "{env sense='sight'}
-            {{ Describe( ) }}
-            {{ HospitalDescribeBusiness() }}
-          {/env}" ) #"
-    Emit( Inventory( location:location ) )
-    Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
+    if location:environment is dark then
+      Emit( "{env sense='sight'}It is too dark to see anything.{/env}" )
+    else
+      Emit( "{title}{{ location:environment }}{/title}" )
+      Emit( "{env sense='sight'}
+              {{ Describe( ) }}
+              {{ HospitalDescribeBusiness() }}
+            {/env}" ) #"
+      Emit( DescribeInventory( location:location ) )
+      Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
+    end
     reset eflag:brief-scan
     reset eflag:scanning
   end
@@ -74,14 +78,18 @@ end
 reacts to post-scan:env as actor with
   if eflag:scan then
     :"<Actor:name> <look> around."
-    Emit( "{title}{{ location:environment }}{/title}" )
-    
-    Emit( "{env sense='sight'}
-            {{ DescribeLong( ) }} 
-            {{ HospitalDescribeBusiness() }}
-          {/env}") #"
-    Emit( Inventory( location:location ) )
-    Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
+    if location:environment is dark then
+      Emit( "{env sense='sight'}It is too dark to see anything.{/env}" )
+    else
+      Emit( "{title}{{ location:environment }}{/title}" )
+      
+      Emit( "{env sense='sight'}
+              {{ DescribeLong( ) }} 
+              {{ HospitalDescribeBusiness() }}
+            {/env}") #"
+      Emit( DescribeInventory( location:location ) )
+      Emit( "Obvious exits: {{ ItemList( Exits() ) }}." ) #"
+    end
     reset eflag:scan
     reset eflag:scanning
   end

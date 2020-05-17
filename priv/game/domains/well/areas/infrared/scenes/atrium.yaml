@@ -57,8 +57,10 @@ detail:
     short: the ceiling
     nouns: [ceiling]
     adjectives: [spotless, white, smooth, bright]
+    sight: >-
+      The ceiling glows with hidden light, banishing shadows from the place.
     extra:
-      sight: glows, lighting the atrium.
+      sight: glows, lighting the space.
   floor:
     related_to: default
     related_by: in

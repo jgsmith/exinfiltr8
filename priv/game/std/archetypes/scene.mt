@@ -25,3 +25,5 @@ reacts to pre-move:release as environment with
 reacts to post-move:release as environment with do
   HospitalDepopulate()
 end
+
+is dark when flag:is-dark and (counter:light < 1)

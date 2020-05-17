@@ -2,6 +2,9 @@ import Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
+
+config :ex_unit, capture_log: true
+
 config :exinfiltr8, Exinfiltr8Web.Endpoint,
   http: [port: 4002],
   server: false,
@@ -17,7 +20,7 @@ config :libcluster,
   topologies: []
 
 # Print only warnings and errors during test
-config :logger, level: :warn
+config :logger, level: :debug
 
 # Configure your database
 config :exinfiltr8, Exinfiltr8.Repo,

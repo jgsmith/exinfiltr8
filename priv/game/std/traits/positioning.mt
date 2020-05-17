@@ -43,7 +43,7 @@ reacts to pre-sit as actor with
     uhoh "You are already sitting."
   else
     if "sitting" & trait:allowed:positions then
-      set flag:is-about-to-sit
+      set eflag:is-about-to-sit
     else
       uhoh "You can't sit there."
     end
@@ -52,15 +52,15 @@ reacts to pre-sit as actor with
 reacts to pre-sit:maybe as actor with
   if is not sitting then
     if "sitting" & trait:allowed:positions then
-      set flag:is-about-to-sit
+      set eflag:is-about-to-sit
     else
       uhoh "You can't sit there."
     end
   end
 
 reacts to post-sit as actor with
-  if flag:is-about-to-sit then
-    reset flag:is-about-to-sit
+  if eflag:is-about-to-sit then
+    reset eflag:is-about-to-sit
     set location:position to "sitting"
   end
 
@@ -69,7 +69,7 @@ reacts to pre-crouch as actor with
     uhoh "You are already crouching."
   else
     if "crouching" & trait:allowed:positions then
-      set flag:is-about-to-crouch
+      set eflag:is-about-to-crouch
     else
       uhoh "You can't crouch there."
     end
@@ -78,15 +78,15 @@ reacts to pre-crouch as actor with
 reacts to pre-crouch:maybe as actor with
   if is not crouching then
     if "crouching" & trait:allowed:positions then
-      set flag:is-about-to-crouch
+      set eflag:is-about-to-crouch
     else
       uhoh "You can't crouch there."
     end
   end
 
 reacts to post-crouch as actor with
-  if flag:is-about-to-crouch then
-    reset flag:is-about-to-crouch
+  if eflag:is-about-to-crouch then
+    reset eflag:is-about-to-crouch
     set location:position to "crouching"
   end
 
@@ -95,7 +95,7 @@ reacts to pre-kneel as actor with
     uhoh "You are already kneeling."
   else
     if "kneeling" & trait:allowed:positions then
-      set flag:is-about-to-kneel
+      set eflag:is-about-to-kneel
     else
       uhoh "You can't kneel there."
     end
@@ -104,15 +104,15 @@ reacts to pre-kneel as actor with
 reacts to pre-kneel:maybe as actor with
   if is not kneeling then
     if "kneeling" & trait:allowed:positions then
-      set flag:is-about-to-kneel
+      set eflag:is-about-to-kneel
     else
       uhoh "You can't kneel there."
     end
   end
 
 reacts to post-kneel as actor with
-  if flag:is-about-to-kneel then
-    reset flag:is-about-to-kneel
+  if eflag:is-about-to-kneel then
+    reset eflag:is-about-to-kneel
     set location:position to "kneeling"
   end
 
@@ -121,7 +121,7 @@ reacts to pre-stand as actor with
     uhoh "You are already standing."
   else
     if "standing" & trait:allowed:positions then
-      set flag:is-about-to-stand
+      set eflag:is-about-to-stand
     else
       uhoh "You can't stand there."
     end
@@ -130,14 +130,14 @@ reacts to pre-stand as actor with
 reacts to pre-stand:maybe as actor with
   if is not standing then
     if "standing" & trait:allowed:positions then
-      set flag:is-about-to-stand
+      set eflag:is-about-to-stand
     else
       uhoh "You can't stand there."
     end
   end
     
 reacts to post-stand as actor with
-  if flag:is-about-to-stand then
-    reset flag:is-about-to-stand
+  if eflag:is-about-to-stand then
+    reset eflag:is-about-to-stand
     set location:position to "standing"
   end
