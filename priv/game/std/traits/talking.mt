@@ -7,6 +7,20 @@
 can say as actor
 can tell as actor
 
+reacts to pre-tell:normal as actor with do
+  set eflag:speaking
+  set eflag:tell-normal
+end
+
+reacts to post-tell:normal as actor with do
+  if eflag:tell-normal then
+    reset eflag:speaking
+    reset eflag:tell-normal
+    
+    :"<Actor> <tell> <direct>: {{ message }}"
+  end
+end
+
 reacts to pre-say:normal as actor with do
   set eflag:speaking
   set eflag:say-normal

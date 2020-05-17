@@ -45,16 +45,16 @@ reacts to move:prox as actor with do
   
   if proximity = "at" then
     set $prep to "to"
-  elsif proximity = "onto" or proximity = "on to" or proximity = "to" or proximity = "on" then
+  elsif proximity & ([ "onto", "on to", "to", "on" ]) then
     set $prep to "onto"
     set proximity to "on"
   end
   
   if eflag:moving-prox then
     if is standing then
-      :"<Actor> <move> " _ $prep _ " <direct>."
+      :"<Actor> <move> {{ $prep }} <direct>."
     else
-      :"<Actor> <crawl> " _ $prep _ " <direct>."
+      :"<Actor> <crawl> {{ $prep }} <direct>."
     end
     if not MoveTo("normal", proximity, direct) then
       reset eflag:moving

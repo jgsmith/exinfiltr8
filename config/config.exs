@@ -46,6 +46,8 @@ config :militerm, Militerm.Cache.Component,
   primary: Militerm.Cache.Component.Primary,
   node_selector: Nebulex.Adapters.Partitioned
 
+config :militerm, :otp_app, :exinfiltr8
+
 import_config "militerm.exs"
 
 # Import environment specific config. This must remain at the bottom

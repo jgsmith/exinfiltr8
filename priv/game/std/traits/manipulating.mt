@@ -10,4 +10,4 @@
 # players.
 #
 
-is viewing, talking, reading, buying
+is opening, getting, dropping, lighting

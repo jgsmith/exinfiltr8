@@ -43,7 +43,7 @@ defmodule Exinfiltr8.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:militerm, path: "../militerm"},
-      
+
       # dev only
       {:phoenix_live_reload, "~> 1.2", only: :dev},
 

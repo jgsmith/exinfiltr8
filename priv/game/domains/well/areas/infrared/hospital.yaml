@@ -15,6 +15,12 @@ locations:
           - on: floor
   basic-cyberlab:
   doggin-pony:
+    npcs:
+      bartender:
+        chance: 1
+        position: standing
+        placement:
+          - behind: bartop
   doggin-pony-kitchen:
     npcs:
       cook:
@@ -25,7 +31,63 @@ locations:
           - at: sink
           - on: floor
 groups:
+meals:
+  ham-sandwich:
+    archetype: "std:meal"
+    data:
+      detail:
+        default:
+          nouns: [sandwich]
+          adjectives: [ham]
+          short: "a ham sandwich"
+        resource:
+          food: 1
+drinks:
+  ale-pint:
+    archetype: "std:drink"
+    data:
+      detail:
+        default:
+          nouns: [ale]
+          adjectives: []
+          short: "a pint of ale"
+        resource:
+          water: 1
+          alcohol: 1
 npcs:
+  bartender:
+    archetype: "std:vendor"
+    is_transient: false
+    data:
+      detail:
+        default:
+          nouns: [bartender, tender]
+          adjectives: [bar]
+          short: the bartender
+          sight: >-
+            The bartender wipes down the counter and looks around for anyone
+            interested in ordering a drink or meal.
+      identity:
+        nominative: he
+        objective: him
+        possessive: his
+      trait:
+        menu:
+          items: [ham-sandwich, ale]
+          ham-sandwich:
+            name: "a ham sandwich"
+            nouns: [sandwich]
+            adjectives: [ham]
+            cost: 1
+            key: ham-sandwich
+            type: meal
+          ale:
+            name: "a pint of ale"
+            nouns: [ale]
+            adjectives: []
+            cost: 1
+            key: ale-pint
+            type: drink
   cook:
     archetype: "std:npc"
     is_transient: false

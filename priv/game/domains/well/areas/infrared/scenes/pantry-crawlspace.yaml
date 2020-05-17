@@ -11,3 +11,5 @@ detail:
     allowed-positions: [crouching]
     sight: >-
       The crawlspace is just big enough to fit.
+flag:
+  - is-dark

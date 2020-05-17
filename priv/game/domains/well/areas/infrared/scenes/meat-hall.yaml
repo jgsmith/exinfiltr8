@@ -1,0 +1,27 @@
+---
+detail:
+  default:
+    short: the meat hall
+    sight: >-
+      This cavernous space is filled with tubes snaking from machine to machine.
+  machines:
+    nouns: [machine, machines]
+    short: machines
+    related_to: default
+    related_by: in
+    sight: >-
+      The machines are made of stainless steel and appear quite clean given the lack of people.
+  tubes:
+    nouns: [tube, tubes]
+    short: tubes
+    related_to: default
+    related_by: in
+    sight: >-
+      The stainless steel tubes seem to transport stuff between machines.
+  floor:
+    nouns: [floor]
+    short: the floor
+    related_to: default
+    related_by: in
+    sight: >-
+      The floor is grimy with the collected bits and pieces of stuff over the years.

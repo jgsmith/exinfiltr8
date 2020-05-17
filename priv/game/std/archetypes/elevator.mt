@@ -1,9 +1,9 @@
 ---
 simple-response:
   lift:
-    - pattern: $_* level $level
-      event: elevator:request
-    - pattern: $_* level $level $_*
+    - pattern: 
+        - $_* level $level
+        - $_* level $level $_*
       event: elevator:request
 thing:
   lift:
